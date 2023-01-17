@@ -1,0 +1,42 @@
+package myjavaprogram;
+
+import java.util.Scanner;
+
+public class AdmissionsDemo {
+    
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String std_name, std_contact,std_email,std_address;
+        int check_total;
+        int check_std=1;
+        
+        Scanner input = new Scanner(System.in);
+        
+        for(int i=0 ; check_std==1 ; i++){
+        
+        System.out.println("Enter the student details : ");   
+        System.out.println("Name :");
+        std_name = input.next();
+        System.out.println("Contact no : ");
+        std_contact=input.next();
+        System.out.println("Email id : ");
+        std_email=input.next();
+        System.out.println("Address : ");
+        std_address=input.next();
+        
+        Admissions student = new Admissions(std_name, std_address, std_contact, std_email);
+        Admissions.total_admission++;
+        System.out.println("Do you need to check total student admissions? (1/0)");
+        check_total=input.nextInt();
+        
+        
+        if( check_total == 1){
+            System.out.println("Total count : "+ Admissions.getTotal_admission());
+        }
+        System.out.println("Do you have new students..?(1/0)");
+        check_std=input.nextInt();
+        
+        System.out.println("Total count :"+ Admissions.getTotal_admission());
+        }
+    }
+}
