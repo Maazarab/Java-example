@@ -1,0 +1,66 @@
+
+package myjavaprogram;
+
+import java.util.Scanner;
+
+
+public class ElseIfLadder {
+
+    static int first,second;
+    public static void main(String[] args) {
+        // TODO code application logic here
+        System.out.println("1. Addition");
+        System.out.println("2. Subtraction");
+        System.out.println("3. Multiplication");
+        System.out.println("4. Division");
+        System.out.println("Enter your choice :");
+        Scanner scanner = new Scanner(System.in);
+        int choice = scanner.nextInt();
+        
+        if(choice==1){
+            readData();
+            int result=addition();
+            System.out.println("The sum is: "+result);
+        }
+        else if(choice==2){
+            readData();
+            int result=subtraction();
+            System.out.println("The difference is : "+result);
+        }
+        else if(choice==3){
+            readData();
+            int result= multiplication();
+            System.out.println("The product is : "+result);
+        }
+        else{
+        readData();
+        int result = division();
+            System.out.println("The remainder is : "+result);
+    }   
+    }
+    public static int addition(){
+        int sum = first+second;
+        return sum;
+    }
+    public static int subtraction(){
+        int sum = first-second;
+        return sum;
+    }
+    public static int multiplication(){
+        int sum = first * second;
+        return sum;
+    }
+    public static int division(){
+        int sum = first/second;
+        return sum;
+    }
+    public static void readData(){
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Enter first number : ");
+        first = scanner.nextInt();
+        
+        System.out.println("Enter second number : ");
+        second = scanner.nextInt();
+    }
+}
