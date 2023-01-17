@@ -1,0 +1,54 @@
+package myjavaprogram;
+
+public class Admissions {
+    String name,address,contactno,email;
+    static int total_admission=0;
+
+    public Admissions(String name, String address, String contactno, String email) {
+        this.name = name;
+        this.address = address;
+        this.contactno = contactno;
+        this.email = email;
+        //total_admission++;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getContactno() {
+        return contactno;
+    }
+
+    public void setContactno(String contactno) {
+        this.contactno = contactno;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public static int getTotal_admission() {
+        return total_admission;
+    }
+
+    public static void setTotal_admission(int total_admission) {
+        Admissions.total_admission = total_admission;
+    }   
+}
